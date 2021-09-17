@@ -1,0 +1,28 @@
+{
+    "defaultEnvironment": {},
+    "image": "ackee/pubsub_to_bq",
+    "metadata": {
+        "description": "Streaming beam example for python flex template.",
+        "name": "PubSub to BQ",
+        "parameters": [
+            {
+                "helpText": "Name of the input PubSub subscription to consume from.",
+                "label": "Input PubSub subscription.",
+                "name": "input_subscription"
+            },
+            {
+                "helpText": "Name of the BigQuery output table name.",
+                "label": "BigQuery output table name.",
+                "name": "output_table"
+            },
+            {
+                "helpText": "BigQuery target table schema.",
+                "label": "BigQuery table schema.",
+                "name": "output_schema"
+            }
+        ]
+    },
+    "sdkInfo": {
+        "language": "PYTHON"
+    }
+}

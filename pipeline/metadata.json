@@ -1,0 +1,21 @@
+{
+  "name": "PubSub to BQ",
+  "description": "Streaming beam example for python flex template.",
+  "parameters": [
+    {
+      "name": "input_subscription",
+      "label": "Input PubSub subscription.",
+      "helpText": "Name of the input PubSub subscription to consume from."
+    },
+    {
+      "name": "output_table",
+      "label": "BigQuery output table name.",
+      "helpText": "Name of the BigQuery output table name."
+    },
+    {
+      "name": "output_schema",
+      "label": "BigQuery table schema.",
+      "helpText": "BigQuery target table schema."
+    }
+  ]
+}

@@ -1,6 +1,5 @@
 import argparse
 import json
-import os
 import logging
 import apache_beam as beam
 from apache_beam.options.pipeline_options import PipelineOptions, StandardOptions
@@ -50,12 +49,12 @@ def run():
     parser.add_argument(
         "--disk_size_gb",
         help="Worker disk size",
-        default="e2-medium",
+        default=30,
     )
     parser.add_argument(
         "--max_num_workers",
         help="Maximum count of workers",
-        default="e2-medium",
+        default=1,
     )
     known_args, pipeline_args = parser.parse_known_args()
 
