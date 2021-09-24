@@ -56,6 +56,11 @@ def run():
         help="Maximum count of workers",
         default=1,
     )
+    parser.add_argument(
+        "--use_public_ips",
+        help="Enable public ip addresses",
+        default=False,
+    )
     known_args, pipeline_args = parser.parse_known_args()
 
     # See https://cloud.google.com/dataflow/docs/reference/pipeline-options
@@ -65,7 +70,8 @@ def run():
         max_num_workers=known_args.max_num_workers,
         num_workers=1,
         disk_size_gb=known_args.disk_size_gb,
-        machine_type=known_args.machine_type
+        machine_type=known_args.machine_type,
+        use_public_ips=known_args.use_public_ips
     )
     pipeline_options.view_as(StandardOptions).streaming = True
 
